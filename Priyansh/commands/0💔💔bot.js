@@ -19,7 +19,7 @@ module.exports.handleEvent = async function({ api, event }) {
   // STEP 1: Trigger "bot"
   if (body && body.trim().toLowerCase() === "bot") {
     global.botSessions[threadID] = true;
-    return api.sendMessage("Bolo jaanu 😏 kya haal hai?", threadID, messageID);
+    return api.sendMessage("Abe Jaldi Bol Kal Subhe Panwe nikalna hai🤨🤨", threadID, messageID);
   }
 
   // STEP 2: Only active session
@@ -74,7 +74,7 @@ Now continue the chat based on recent conversation:\n\n${fullChat}
     return api.sendMessage(botReply, threadID, messageID);
   } catch (err) {
     console.error("Pollinations error:", err.message);
-    return api.sendMessage("Sorry baby 😅 bot abhi thoda busy hai...", threadID, messageID);
+    return api.sendMessage("ja na bhundi sakal ke😒", threadID, messageID);
   }
 };
 
